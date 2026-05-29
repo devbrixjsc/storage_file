@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – Velogos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0c0f;
+      --surface: #111418;
+      --border: #1e2329;
+      --accent: #e8c44a;
+      --accent2: #ff5c35;
+      --text: #d4d8de;
+      --muted: #6b7280;
+      --heading: #f0f2f5;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    /* HEADER */
+    header {
+      position: relative;
+      overflow: hidden;
+      padding: 72px 24px 56px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(135deg, #0a0c0f 60%, #131a10 100%);
+    }
+    header::before {
+      content: 'VELOGOS';
+      position: absolute;
+      top: -20px; right: -10px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(80px, 18vw, 200px);
+      color: rgba(232,196,74,0.04);
+      letter-spacing: 0.05em;
+      pointer-events: none;
+      line-height: 1;
+    }
+    .header-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .logo-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    .logo-icon {
+      width: 44px; height: 44px;
+      background: var(--accent);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .logo-icon svg { width: 26px; height: 26px; }
+    .logo-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      letter-spacing: 0.12em;
+      color: var(--heading);
+    }
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(38px, 7vw, 60px);
+      letter-spacing: 0.04em;
+      color: var(--heading);
+      line-height: 1.05;
+      margin-bottom: 16px;
+    }
+    h1 span { color: var(--accent); }
+    .meta {
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* LAYOUT */
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+
+    /* SECTION */
+    section {
+      margin-bottom: 52px;
+      padding-bottom: 52px;
+      border-bottom: 1px solid var(--border);
+      opacity: 0;
+      transform: translateY(18px);
+      animation: fadeUp 0.5s ease forwards;
+    }
+    section:last-child { border-bottom: none; }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    section:nth-child(1)  { animation-delay: 0.05s; }
+    section:nth-child(2)  { animation-delay: 0.10s; }
+    section:nth-child(3)  { animation-delay: 0.15s; }
+    section:nth-child(4)  { animation-delay: 0.20s; }
+    section:nth-child(5)  { animation-delay: 0.25s; }
+    section:nth-child(6)  { animation-delay: 0.30s; }
+    section:nth-child(7)  { animation-delay: 0.35s; }
+    section:nth-child(8)  { animation-delay: 0.40s; }
+    section:nth-child(9)  { animation-delay: 0.45s; }
+    section:nth-child(10) { animation-delay: 0.50s; }
+
+    .section-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 26px;
+      letter-spacing: 0.06em;
+      color: var(--heading);
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    p { margin-bottom: 14px; font-size: 15px; }
+    p:last-child { margin-bottom: 0; }
+
+    /* LIST */
+    ul {
+      list-style: none;
+      margin: 14px 0;
+    }
+    ul li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 10px;
+      width: 6px; height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    /* TAG CHIPS */
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .chip {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 5px 12px;
+      font-size: 13px;
+      color: var(--text);
+      letter-spacing: 0.02em;
+    }
+    .chip.accent {
+      background: rgba(232,196,74,0.08);
+      border-color: rgba(232,196,74,0.25);
+      color: var(--accent);
+    }
+
+    /* CALLOUT */
+    .callout {
+      background: var(--surface);
+      border-left: 3px solid var(--accent2);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    .callout strong { color: var(--heading); }
+
+    /* TABLE */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    th {
+      text-align: left;
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 0.08em;
+      font-size: 13px;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+      padding: 8px 12px;
+    }
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    tr:last-child td { border-bottom: none; }
+
+    /* CONTACT */
+    .contact-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      margin-top: 20px;
+    }
+    .contact-box a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .contact-box a:hover { text-decoration: underline; }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+    footer strong { color: var(--accent); font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.1em; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo-row">
+      <div class="logo-icon">
+        <!-- baseball bat icon simplified -->
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 21L13 11M13 11C13 11 16 8 18 6C20 4 21 3 21 3C21 3 20 4 18 6C16 8 13 11 13 11Z" stroke="#0a0c0f" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="17" cy="7" r="3" fill="#0a0c0f" opacity="0.4"/>
+          <path d="M3 21L7 17" stroke="#0a0c0f" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <span class="logo-name">VELOGOS</span>
+    </div>
+    <h1>Privacy<br /><span>Policy</span></h1>
+    <p class="meta">Effective Date: May 29, 2025 &nbsp;·&nbsp; Version 1.0</p>
+  </div>
+</header>
+
+<main>
+
+  <!-- 1. OVERVIEW -->
+  <section>
+    <div class="section-num">01 — Overview</div>
+    <h2>Who We Are & What This Covers</h2>
+    <p>Velogos ("we", "us", "our") is a mobile application designed for baseball players that connects to Bluetooth Low Energy (BLE) sensors to measure swing acceleration (m/s²), tracks session data, and manages athlete profiles through a subscription-based system.</p>
+    <p>This Privacy Policy explains what personal information we collect, why we collect it, how we use it, and your rights regarding your data when you use the Velogos app (iOS and Android).</p>
+    <div class="callout"><strong>Short version:</strong> We collect your account info, swing session data, and BLE device identifiers to power the app. We store data on secure servers. We don't sell your data.</div>
+  </section>
+
+  <!-- 2. DATA WE COLLECT -->
+  <section>
+    <div class="section-num">02 — Data Collection</div>
+    <h2>Information We Collect</h2>
+    <table>
+      <thead>
+        <tr><th>Category</th><th>What exactly</th><th>Why</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Account</strong></td>
+          <td>Name, email address, profile photo (if via Google/Apple OAuth), password hash</td>
+          <td>Authentication & account management</td>
+        </tr>
+        <tr>
+          <td><strong>Athlete Profile</strong></td>
+          <td>Player name, position, age/DOB (optional), team (optional)</td>
+          <td>Organise sessions per player profile</td>
+        </tr>
+        <tr>
+          <td><strong>Session Data</strong></td>
+          <td>Swing acceleration values (m/s²), timestamp, session duration, sensor ID, chart snapshots</td>
+          <td>Display performance charts & history</td>
+        </tr>
+        <tr>
+          <td><strong>BLE Device</strong></td>
+          <td>Sensor name, device identifier, connection logs</td>
+          <td>Pair & reconnect sensors automatically</td>
+        </tr>
+        <tr>
+          <td><strong>Subscription</strong></td>
+          <td>Plan tier, purchase token (via App Store / Google Play), receipt</td>
+          <td>Unlock profile limits & premium features</td>
+        </tr>
+        <tr>
+          <td><strong>Camera / Photo</strong></td>
+          <td>Photo taken via camera or selected from photo library (optional)</td>
+          <td>Display avatar on athlete profile only — not used for any other purpose</td>
+        </tr>
+        <tr>
+          <td><strong>Usage & Diagnostics</strong></td>
+          <td>Crash logs, feature interactions, OS version, device model</td>
+          <td>Bug fixing & app improvement</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>We do <strong>not</strong> collect GPS/location, contacts, or microphone data. Camera access is optional and used solely to set a profile avatar.</p>
+  </section>
+
+  <!-- 3. BLUETOOTH -->
+  <section>
+    <div class="section-num">03 — Bluetooth & Sensors</div>
+    <h2>Bluetooth Low Energy (BLE) Access</h2>
+    <p>Velogos requires Bluetooth permission to discover and connect to your swing sensor. We access BLE solely to read acceleration data during active sessions.</p>
+    <ul>
+      <li>BLE scanning is only active while the app is open and you initiate a pairing or session.</li>
+      <li>We do not track your location via Bluetooth or scan for unrelated devices.</li>
+      <li>Sensor identifiers are stored locally and on our server only to enable automatic reconnection.</li>
+    </ul>
+    <div class="chip-row">
+      <span class="chip accent">Bluetooth Required</span>
+      <span class="chip">No Background Scanning</span>
+      <span class="chip">No Location Inference</span>
+    </div>
+  </section>
+
+  <!-- 4. CAMERA -->
+  <section>
+    <div class="section-num">04 — Camera & Photos</div>
+    <h2>Camera & Photo Library Access</h2>
+    <p>Velogos may request access to your device's camera and photo library solely for the purpose of setting an avatar image on an athlete profile.</p>
+    <ul>
+      <li>Photos are used <strong>only</strong> to display as a profile avatar within the app.</li>
+      <li>We do not scan, analyse, or process photo content beyond resizing for display.</li>
+      <li>Profile photos are uploaded to our secure server so they appear consistently across devices.</li>
+      <li>You can remove a profile photo at any time; the image will be deleted from our servers within 30 days.</li>
+      <li>Camera and photo library access are requested only when you actively choose to set or update a profile photo — never in the background.</li>
+    </ul>
+    <div class="chip-row">
+      <span class="chip accent">User-initiated only</span>
+      <span class="chip">No background access</span>
+      <span class="chip">No image analysis</span>
+      <span class="chip">Avatar display only</span>
+    </div>
+  </section>
+
+  <!-- 5. HOW WE USE DATA -->
+  <section>
+    <div class="section-num">05 — Use of Data</div>
+    <h2>How We Use Your Information</h2>
+    <ul>
+      <li><strong>Run the app:</strong> Authenticate you, sync sessions across devices, display performance charts.</li>
+      <li><strong>Profile management:</strong> Create and manage multiple athlete profiles according to your subscription tier.</li>
+      <li><strong>Subscriptions:</strong> Verify purchase receipts, enforce tier limits (number of profiles), and process renewals via App Store / Google Play.</li>
+      <li><strong>Improve the app:</strong> Analyse anonymised crash logs and usage patterns to fix bugs and prioritise features.</li>
+      <li><strong>Communications:</strong> Send transactional emails (e.g. password reset, subscription confirmation). No marketing without explicit opt-in.</li>
+    </ul>
+  </section>
+
+  <!-- 5. OAUTH -->
+  <section>
+    <div class="section-num">05 — Sign In with Google & Apple</div>
+    <h2>OAuth Authentication</h2>
+    <p>When you choose Sign in with Google or Sign in with Apple, we receive only the information those services provide:</p>
+    <ul>
+      <li><strong>Google:</strong> Name, email address, and profile picture URL.</li>
+      <li><strong>Apple:</strong> A unique identifier and, optionally, your name and email (Apple may relay or hide your email).</li>
+    </ul>
+    <p>We never receive or store your Google or Apple passwords. OAuth tokens are used only to verify your identity and are handled securely on our server.</p>
+    <div class="callout"><strong>Apple Hide My Email:</strong> If you use Apple's "Hide My Email" feature, we will communicate with you through the relay address Apple provides.</div>
+  </section>
+
+  <!-- 6. DATA STORAGE -->
+  <section>
+    <div class="section-num">06 — Storage & Security</div>
+    <h2>Where & How Your Data Is Stored</h2>
+    <p>All data is stored on our secure cloud servers. We implement industry-standard safeguards:</p>
+    <ul>
+      <li>Data in transit protected by TLS 1.2+.</li>
+      <li>Data at rest encrypted using AES-256.</li>
+      <li>Access to production databases limited to authorised personnel only.</li>
+      <li>Regular security reviews and dependency audits.</li>
+    </ul>
+    <p>Session data is also cached locally on your device for offline chart viewing. You may clear local cache at any time via the app settings.</p>
+  </section>
+
+  <!-- 7. SHARING -->
+  <section>
+    <div class="section-num">07 — Data Sharing</div>
+    <h2>Who We Share Data With</h2>
+    <p>We do <strong>not sell</strong> your personal data. We share data only in the following circumstances:</p>
+    <ul>
+      <li><strong>Service providers:</strong> Hosting, analytics, crash reporting — under strict data processing agreements.</li>
+      <li><strong>App Stores:</strong> Apple App Store and Google Play process subscription payments; their privacy policies apply to that transaction.</li>
+      <li><strong>Legal requirements:</strong> If required by law, court order, or to protect the safety of our users.</li>
+    </ul>
+  </section>
+
+  <!-- 8. RETENTION -->
+  <section>
+    <div class="section-num">08 — Data Retention</div>
+    <h2>How Long We Keep Your Data</h2>
+    <ul>
+      <li><strong>Account & profile data:</strong> Retained while your account is active, and for 30 days after account deletion.</li>
+      <li><strong>Session data:</strong> Retained while your account is active. You may delete individual sessions or all data at any time.</li>
+      <li><strong>Crash & diagnostic logs:</strong> Automatically deleted after 90 days.</li>
+      <li><strong>Subscription receipts:</strong> Retained for up to 7 years as required for financial records.</li>
+    </ul>
+  </section>
+
+  <!-- 9. USER RIGHTS -->
+  <section>
+    <div class="section-num">09 — Your Rights</div>
+    <h2>Your Privacy Rights</h2>
+    <p>You have the right to:</p>
+    <ul>
+      <li><strong>Access:</strong> Request a copy of the personal data we hold about you.</li>
+      <li><strong>Correction:</strong> Update inaccurate profile information directly in the app.</li>
+      <li><strong>Deletion:</strong> Delete your account and all associated data from Settings → Account → Delete Account.</li>
+      <li><strong>Portability:</strong> Export your session data in CSV format from the app.</li>
+      <li><strong>Opt-out:</strong> Disable diagnostic reporting at any time in Settings → Privacy.</li>
+    </ul>
+    <p>For requests you cannot complete in-app, contact us at the address below and we will respond within 30 days.</p>
+  </section>
+
+  <!-- 10. CHILDREN -->
+  <section>
+    <div class="section-num">10 — Children's Privacy</div>
+    <h2>Users Under 13</h2>
+    <p>Velogos is not directed at children under 13 years of age. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal data, please contact us immediately and we will delete it.</p>
+    <p>For users aged 13–17, we encourage a parent or guardian to review this policy with them.</p>
+  </section>
+
+  <!-- 11. CHANGES -->
+  <section>
+    <div class="section-num">11 — Policy Updates</div>
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we make significant changes, we will notify you via an in-app notification or email at least 14 days before the change takes effect. Continued use of the app after that date constitutes your acceptance of the updated policy.</p>
+    <p>The "Effective Date" at the top of this page always reflects the current version.</p>
+  </section>
+
+  <!-- 12. CONTACT -->
+  <section>
+    <div class="section-num">12 — Contact</div>
+    <h2>Contact Us</h2>
+    <p>If you have questions, requests, or concerns about this Privacy Policy or your data:</p>
+    <div class="contact-box">
+      <p><strong style="color:var(--heading)">Velogos</strong></p>
+      <p>Email: <a href="mailto:Chandler@cmoorevelocity.com">Chandler@cmoorevelocity.com</a></p>
+      <!-- <p>Website: <a href="https://velogos.app">velogos.app</a></p> -->
+      <p style="margin-top:12px; font-size:13px; color:var(--muted)">We aim to respond to all privacy-related inquiries within 5 business days.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 <strong>VELOGOS</strong> — All rights reserved.</p>
+  <p style="margin-top:6px;">Privacy Policy · Version 1.0 · May 29, 2025</p>
+</footer>
+
+</body>
+</html>
