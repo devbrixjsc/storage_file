@@ -1,0 +1,10 @@
+﻿name,type,value,ttl,priority,weight,port,title,flags,tag
+www,CNAME,f2a98203d586.lotusai.vn,3600,10,,,,,
+@,TXT,_pqkq5lvdu7m621xvfhyh655ljhxjnsu,300,10,,,,,
+_dmarc,TXT,v=DMARC1; p=reject; adkim=r; aspf=s; sp=none,3600,10,,,,,
+dkim._domainkey,CNAME,dkim1.maychuemail.com,3600,10,,,,,
+@,TXT,v=spf1 a mx include:spf.maychuemail.com ~all,3600,10,,,,,
+mx,MX,mx92219.maychuemail.net,3600,10,,,,,
+mail,CNAME,mail92219.maychuemail.com,3600,10,,,,,
+@,MX,mx92219.maychuemail.net,3600,10,,,,,
+@,MX,mail92219.maychuemail.com,300,5,,,,,
